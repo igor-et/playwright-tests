@@ -35,8 +35,16 @@ export default defineConfig({
     /* Base URL to use in actions like `await page.goto('')`. */
     // baseURL: 'http://localhost:3000',
 
+    baseURL: 'https://qauto.forstudy.space/',
+
+    httpCredentials: {
+      username: 'guest',
+      password: 'welcome2qauto',
+    },
+
+
     /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
-    trace: 'on-first-retry',
+    trace: 'on',
     headless: false,
     ignoreHTTPSErrors: true,
     actionTimeout: 10000,
@@ -52,7 +60,7 @@ export default defineConfig({
       use: { ...devices['Desktop Chrome'] },
     },
 
-    {
+   /* {
       name: 'firefox',
       use: { ...devices['Desktop Firefox'] },
     },
@@ -60,8 +68,7 @@ export default defineConfig({
     {
       name: 'webkit',
       use: { ...devices['Desktop Safari'] },
-    },
-
+    },*/
     /* Test against mobile viewports. */
     // {
     //   name: 'Mobile Chrome',
